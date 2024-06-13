@@ -6,7 +6,8 @@
 ## Index 
 
 - 의류 쇼핑몰 제품 상세 페이지
-- DENIM HALF SHIRTS
+- 쇼핑몰 LOGO를 직접 제작하여 상단 배치
+- DENIM HALF SHIRTS 페이지
 - COLOR & SIZE 설정
 - 제품 상세 사이즈 안내
 
