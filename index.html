@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상품 상세페이지</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #000;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            background: #fff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .top-menu {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 0;
+        }
+        .top-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+        .top-menu ul li {
+            display: inline;
+        }
+        .top-menu ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        .top-menu ul li a:hover {
+            background-color: #555;
+        }
+        #main-logo img {
+            display: block;
+            margin: 20px auto;
+        }
+        .slider {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slides img {
+            width: 100%;
+            height: auto;
+        }
+        .navigation {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .navigation a {
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 10px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .product-details {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .product-details h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 2em;
+            color: #000;
+        }
+        .price {
+            color: #000;
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+        .original-price {
+            text-decoration: line-through;
+            margin-right: 10px;
+        }
+        .discount-price {
+            color: #b12704;
+        }
+        .options {
+            margin: 20px 0;
+        }
+        .options label {
+            margin-right: 10px;
+            color: #000;
+        }
+        .description {
+            margin: 20px 0;
+            flex-grow: 1;
+            color: #000;
+        }
+        .buttons {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .buy-now, .add-to-cart {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-right: 10px;
+            color: #fff;
+        }
+        .buy-now {
+            background: #000;
+        }
+        .add-to-cart {
+            background: #555;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            color: #000;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        h3 {
+            font-size: 1.2em;
+            margin: 20px 0 10px;
+        }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div id="main-logo">
+        <h1>
+        <img src="logo.jpeg" width="128"/>
+        </h1>
+    </div>
+    <div class="top-menu">
+        <ul>
+            <li><a href="#">CARTEGORY</a></li>
+            <li><a href="#">LOGIN</a></li>
+            <li><a href="#">CART</a></li>
+            <li><a href="#">INFORMATION</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="slider">
+            <div class="slides">
+                <img src="https://cafe24.poxo.com/ec01/partimento05/a5/QDBG8U7Rcz73ja2fSrpyWQrvOADHzREd3qxVxCcX1z1mdT5C/x7pQj8Dkd3471kDCxXlRru0DeHfQf35eMA==/_/web/product/extra/small/202405/974ef0ae76fadbc04b820a06979a5108.jpg" alt="상품 이미지 1">
+                <img src="https://cafe24.poxo.com/ec01/partimento05/a5/QDBG8U7Rcz73ja2fSrpyWQrvOADHzREd3qxVxCcX1z1mdT5C/x7pQj8Dkd3471kDCxXlRru0DeHfQf35eMA==/_/web/product/extra/small/202405/8b2ed7136a9519a81f232091188a8ab6.jpg" alt="상품 이미지 2">
+            </div>
+            <div class="navigation">
+                <a href="#" class="prev">&#10094;</a>
+                <a href="#" class="next">&#10095;</a>
+            </div>
+        </div>
+        <div class="product-details">
+            <h1>DESTROYED DENIM WESTERN HALF SHIRTS</h1>
+            <p class="price"><span class="original-price">₩75,000</span> <span class="discount-price">₩59,000</span></p>
+            <div class="options">
+                <div class="color">
+                    <label for="color">COLOR:</label>
+                    <select id="color" name="color">
+                        <option value="blue">BLUE</option>
+                    </select>
+                </div>
+                <div class="size">
+                    <label for="size">SIZE:</label>
+                    <select id="size" name="size">
+                        <option value="m">M</option>
+                        <option value="l">L</option>
+                    </select>
+                </div>
+            </div>
+            <div class="buttons">
+                <a href="#" class="add-to-cart">ADD TO CART</a>
+                <a href="#" class="buy-now">BUY IT NOW</a>
+            </div>
+            <div class="description">
+                <p>레트로한 컬러감과 빈티지한 색감이 돋보이는 웨스턴 무드의 하프 셔츠입니다.
+                적당한 두께감으로 제작되어 겨울을 제외한 모든 계절 착용이 가능합니다.
+                자연스럽게 드롭되는 라인의 제품으로 루즈한 실루엣으로 착용이 가능한 제품입니다.
+                클래식함과 캐주얼한 무드를 동시에 지닌 제품으로 무드에 따라 다양한 느낌으로 스타일링이 가능합니다.
+                </p>
+                <p>*워싱 제품 특성상 개체별로 워싱의 정도나 색감의 차이가 있을 수 있습니다.</p>
+                <section>
+                    <h3>SIZE MEASUREMENTS</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>SIZE</th>
+                                <th>MEDIUM</th>
+                                <th>LARGE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>LENGTH</td>
+                                <td>73</td>
+                                <td>75</td>
+                            </tr>
+                            <tr>
+                                <td>SHOULDER</td>
+                                <td>52</td>
+                                <td>53</td>
+                            </tr>
+                            <tr>
+                                <td>CHEST</</td>
+                                <td>59</td>
+                                <td>61</td>
+                            </tr>
+                            <tr>
+                                <td>SLEEVE</td>
+                                <td>25</td>
+                                <td>26</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section>
+                    <h3>FABRIC & CARE</h3>
+                    <p>FABRIC: 100% COTTON</p>
+                </section>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <h2>한 학기동안 좋은 강의 감사합니다.</h2>
+        <p>&copy; 국민대학교 경영대학원 디지털마케팅전공 U2023069 민병수</p>
+    </footer>
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelector('.slides');
+        const images = document.querySelectorAll('.slides img');
+        const totalSlides = images.length;
+        document.querySelector('.prev').addEventListener('click', function(event) {
+            event.preventDefault();
+            currentIndex = (currentIndex === 0) ? totalSlides - 1 : currentIndex - 1;
+            updateSlidePosition();
+        });
+        document.querySelector('.next').addEventListener('click', function(event) {
+            event.preventDefault();
+            currentIndex = (currentIndex === totalSlides - 1) ? 0 : currentIndex + 1;
+            updateSlidePosition();
+        });
+        function updateSlidePosition() {
+            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+    </script>
+</body>
+</html>
