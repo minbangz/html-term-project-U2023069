@@ -1,17 +1,14 @@
-# 24-dima-3th-min
+# html-term-project-U2023069-minbyeongsu
+2024 Digital Marketing Programming term project
+
+2024년 디지털마케팅 학기말 과제 입니다.
 
 ## Index 
 
-- Features
-- Collabolators
-- References
+- 의류 쇼핑몰 제품 상세 페이지
+- DENIM HALF SHIRTS
+- COLOR & SIZE 설정
+- 제품 상세 사이즈 안내
 
-## Features
 
-Markdown 문법에서 문단을 작성하기 위해서는 그냥 작성하시면 됩니다.
 
-## Collabolators
-
-## References
-
-- [Tesla Ul](https://www.tesla.com/ko_kr)
